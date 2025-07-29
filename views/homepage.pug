@@ -1,0 +1,27 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1= title
+
+    p
+      a(href='/update-cobj') Add/Update this table
+
+    if data.length
+      table(border='1')
+        thead
+          tr
+            th ID
+            th Name
+            th Type
+            th Color
+        tbody
+          each record in data
+            tr
+              td= record.id
+              td= record.properties.pet_nam
+              td= record.properties.pet_type
+              td= record.properties.pet_color
+    else
+      p No records found.

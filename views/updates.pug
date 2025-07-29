@@ -1,0 +1,19 @@
+doctype html
+html
+  head
+    title= title
+  body
+    h1 Update Custom Object Form
+    form(action='/update-cobj' method='POST')
+      label(for='pet_nam') Name:
+      input(type='text' name='pet_nam' required)
+      br
+      label(for='pet_type') Type:
+      input(type='text' name='pet_type' required)
+      br
+      label(for='pet_color') Color:
+      input(type='text' name='pet_color' required)
+      br
+      button(type='submit') Submit
+    p
+      a(href='/') Return to the homepage
